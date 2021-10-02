@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    
+     <script>
+        function distribuir(){
+          var digitado = document.getElementById("selecionar").value
+          document.getElementById("selecionar").val + " "
+          digitado.trim()
+            switch(digitado){
+              case "0":
+              case "1":
+              case "3":
+              case "4":
+              case "5":
+              case "6":
+              case "7":
+              case "8":
+              case "9":
+              document.getElementById("numeros").value = digitado
+            break;
+               default:
+                 document.getElementById("letras").value = digitado
+        }}
+              
+     </script>  
+</head>
+<body>
+    <input type="text" placeholder="Digite um caractere" onkeyup="distribuir()" id="selecionar"/>
+    <hr>
+    <span>Letras</span>
+    <input type="text" disabled id="letras"/>
+    <span>Números</span>
+    <input type="text" disabled id="numeros" >
+
+</body>
+     </html>
